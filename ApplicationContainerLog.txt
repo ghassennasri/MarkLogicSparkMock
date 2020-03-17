@@ -1,0 +1,1001 @@
+
+Submit application /app/application.jar with main class Main to Spark master spark://spark-master:7077
+Passing arguments
+https://jcenter.bintray.com added as a remote repository with the name: repo-1
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+com.databricks#spark-xml_2.11 added as a dependency
+com.thoughtworks.xstream#xstream added as a dependency
+com.marklogic#marklogic-client-api added as a dependency
+javax.ws.rs#javax.ws.rs-api added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-307d865a-5b90-4fa6-a6e0-13868727cb18;1.0
+	confs: [default]
+	found com.databricks#spark-xml_2.11;0.9.0 in central
+	found commons-io#commons-io;2.6 in central
+	found org.glassfish.jaxb#txw2;2.3.2 in central
+	found com.thoughtworks.xstream#xstream;1.4.2 in central
+	found xmlpull#xmlpull;1.1.3.1 in central
+	found xpp3#xpp3_min;1.1.4c in central
+	found com.marklogic#marklogic-client-api;4.1.1 in central
+	found com.squareup.okhttp3#okhttp;3.10.0 in central
+	found com.squareup.okio#okio;1.14.0 in central
+	found com.squareup.okhttp3#logging-interceptor;3.10.0 in central
+	found com.burgstaller#okhttp-digest;1.16 in repo-1
+	found com.sun.mail#javax.mail;1.6.1 in central
+	found javax.activation#activation;1.1 in central
+	found org.slf4j#slf4j-api;1.7.25 in central
+	found com.fasterxml.jackson.core#jackson-core;2.9.4 in central
+	found com.fasterxml.jackson.core#jackson-annotations;2.9.4 in central
+	found com.fasterxml.jackson.core#jackson-databind;2.9.4 in central
+downloading https://repo1.maven.org/maven2/com/databricks/spark-xml_2.11/0.9.0/spark-xml_2.11-0.9.0.jar ...
+	[SUCCESSFUL ] com.databricks#spark-xml_2.11;0.9.0!spark-xml_2.11.jar (878ms)
+downloading https://repo1.maven.org/maven2/com/thoughtworks/xstream/xstream/1.4.2/xstream-1.4.2.jar ...
+	[SUCCESSFUL ] com.thoughtworks.xstream#xstream;1.4.2!xstream.jar (1390ms)
+downloading https://repo1.maven.org/maven2/com/marklogic/marklogic-client-api/4.1.1/marklogic-client-api-4.1.1.jar ...
+	[SUCCESSFUL ] com.marklogic#marklogic-client-api;4.1.1!marklogic-client-api.jar (5015ms)
+downloading https://repo1.maven.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar ...
+	[SUCCESSFUL ] commons-io#commons-io;2.6!commons-io.jar (1049ms)
+downloading https://repo1.maven.org/maven2/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar ...
+	[SUCCESSFUL ] org.glassfish.jaxb#txw2;2.3.2!txw2.jar (422ms)
+downloading https://repo1.maven.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar ...
+	[SUCCESSFUL ] xmlpull#xmlpull;1.1.3.1!xmlpull.jar (177ms)
+downloading https://repo1.maven.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar ...
+	[SUCCESSFUL ] xpp3#xpp3_min;1.1.4c!xpp3_min.jar (215ms)
+downloading https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.10.0/okhttp-3.10.0.jar ...
+	[SUCCESSFUL ] com.squareup.okhttp3#okhttp;3.10.0!okhttp.jar (1726ms)
+downloading https://repo1.maven.org/maven2/com/squareup/okhttp3/logging-interceptor/3.10.0/logging-interceptor-3.10.0.jar ...
+	[SUCCESSFUL ] com.squareup.okhttp3#logging-interceptor;3.10.0!logging-interceptor.jar (183ms)
+downloading https://jcenter.bintray.com/com/burgstaller/okhttp-digest/1.16/okhttp-digest-1.16.jar ...
+	[SUCCESSFUL ] com.burgstaller#okhttp-digest;1.16!okhttp-digest.jar (865ms)
+downloading https://repo1.maven.org/maven2/com/sun/mail/javax.mail/1.6.1/javax.mail-1.6.1.jar ...
+	[SUCCESSFUL ] com.sun.mail#javax.mail;1.6.1!javax.mail.jar (3073ms)
+downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar ...
+	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar (348ms)
+downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4.jar ...
+	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-core;2.9.4!jackson-core.jar(bundle) (1768ms)
+downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.4/jackson-annotations-2.9.4.jar ...
+	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-annotations;2.9.4!jackson-annotations.jar(bundle) (472ms)
+downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar ...
+	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-databind;2.9.4!jackson-databind.jar(bundle) (7205ms)
+downloading https://repo1.maven.org/maven2/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar ...
+	[SUCCESSFUL ] com.squareup.okio#okio;1.14.0!okio.jar (698ms)
+downloading https://repo1.maven.org/maven2/javax/activation/activation/1.1/activation-1.1.jar ...
+	[SUCCESSFUL ] javax.activation#activation;1.1!activation.jar (533ms)
+:: resolution report :: resolve 57161ms :: artifacts dl 26042ms
+	:: modules in use:
+	com.burgstaller#okhttp-digest;1.16 from repo-1 in [default]
+	com.databricks#spark-xml_2.11;0.9.0 from central in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.9.4 from central in [default]
+	com.fasterxml.jackson.core#jackson-core;2.9.4 from central in [default]
+	com.fasterxml.jackson.core#jackson-databind;2.9.4 from central in [default]
+	com.marklogic#marklogic-client-api;4.1.1 from central in [default]
+	com.squareup.okhttp3#logging-interceptor;3.10.0 from central in [default]
+	com.squareup.okhttp3#okhttp;3.10.0 from central in [default]
+	com.squareup.okio#okio;1.14.0 from central in [default]
+	com.sun.mail#javax.mail;1.6.1 from central in [default]
+	com.thoughtworks.xstream#xstream;1.4.2 from central in [default]
+	commons-io#commons-io;2.6 from central in [default]
+	javax.activation#activation;1.1 from central in [default]
+	org.glassfish.jaxb#txw2;2.3.2 from central in [default]
+	org.slf4j#slf4j-api;1.7.25 from central in [default]
+	xmlpull#xmlpull;1.1.3.1 from central in [default]
+	xpp3#xpp3_min;1.1.4c from central in [default]
+	:: evicted modules:
+	com.squareup.okhttp3#okhttp;3.9.1 by [com.squareup.okhttp3#okhttp;3.10.0] in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.9.0 by [com.fasterxml.jackson.core#jackson-annotations;2.9.4] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   19  |   17  |   17  |   2   ||   17  |   17  |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-307d865a-5b90-4fa6-a6e0-13868727cb18
+	confs: [default]
+	17 artifacts copied, 0 already retrieved (5387kB/18ms)
+20/03/17 17:40:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+log4j:WARN No appenders could be found for logger (com.marklogic.client.impl.OkHttpServices).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/03/17 17:40:51 INFO SparkContext: Running Spark version 2.4.5
+20/03/17 17:40:51 INFO SparkContext: Submitted application: Main
+20/03/17 17:40:51 INFO SecurityManager: Changing view acls to: root
+20/03/17 17:40:51 INFO SecurityManager: Changing modify acls to: root
+20/03/17 17:40:51 INFO SecurityManager: Changing view acls groups to:
+20/03/17 17:40:51 INFO SecurityManager: Changing modify acls groups to:
+20/03/17 17:40:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+20/03/17 17:40:52 INFO Utils: Successfully started service 'sparkDriver' on port 36065.
+20/03/17 17:40:52 INFO SparkEnv: Registering MapOutputTracker
+20/03/17 17:40:52 INFO SparkEnv: Registering BlockManagerMaster
+20/03/17 17:40:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/03/17 17:40:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/03/17 17:40:52 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-feb3bcbc-18b7-4397-ae1d-017707373eda
+20/03/17 17:40:52 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/03/17 17:40:52 INFO SparkEnv: Registering OutputCommitCoordinator
+20/03/17 17:40:52 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/03/17 17:40:52 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://e016075d2404:4040
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.databricks_spark-xml_2.11-0.9.0.jar at spark://e016075d2404:36065/jars/com.databricks_spark-xml_2.11-0.9.0.jar with timestamp 1584466852730
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.thoughtworks.xstream_xstream-1.4.2.jar at spark://e016075d2404:36065/jars/com.thoughtworks.xstream_xstream-1.4.2.jar with timestamp 1584466852731
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.marklogic_marklogic-client-api-4.1.1.jar at spark://e016075d2404:36065/jars/com.marklogic_marklogic-client-api-4.1.1.jar with timestamp 1584466852731
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-io_commons-io-2.6.jar at spark://e016075d2404:36065/jars/commons-io_commons-io-2.6.jar with timestamp 1584466852732
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.glassfish.jaxb_txw2-2.3.2.jar at spark://e016075d2404:36065/jars/org.glassfish.jaxb_txw2-2.3.2.jar with timestamp 1584466852732
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/xmlpull_xmlpull-1.1.3.1.jar at spark://e016075d2404:36065/jars/xmlpull_xmlpull-1.1.3.1.jar with timestamp 1584466852732
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/xpp3_xpp3_min-1.1.4c.jar at spark://e016075d2404:36065/jars/xpp3_xpp3_min-1.1.4c.jar with timestamp 1584466852732
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okhttp3_okhttp-3.10.0.jar at spark://e016075d2404:36065/jars/com.squareup.okhttp3_okhttp-3.10.0.jar with timestamp 1584466852733
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okhttp3_logging-interceptor-3.10.0.jar at spark://e016075d2404:36065/jars/com.squareup.okhttp3_logging-interceptor-3.10.0.jar with timestamp 1584466852733
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.burgstaller_okhttp-digest-1.16.jar at spark://e016075d2404:36065/jars/com.burgstaller_okhttp-digest-1.16.jar with timestamp 1584466852733
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.sun.mail_javax.mail-1.6.1.jar at spark://e016075d2404:36065/jars/com.sun.mail_javax.mail-1.6.1.jar with timestamp 1584466852734
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.25.jar at spark://e016075d2404:36065/jars/org.slf4j_slf4j-api-1.7.25.jar with timestamp 1584466852734
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.9.4.jar at spark://e016075d2404:36065/jars/com.fasterxml.jackson.core_jackson-core-2.9.4.jar with timestamp 1584466852735
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.9.4.jar at spark://e016075d2404:36065/jars/com.fasterxml.jackson.core_jackson-annotations-2.9.4.jar with timestamp 1584466852735
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.9.4.jar at spark://e016075d2404:36065/jars/com.fasterxml.jackson.core_jackson-databind-2.9.4.jar with timestamp 1584466852735
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okio_okio-1.14.0.jar at spark://e016075d2404:36065/jars/com.squareup.okio_okio-1.14.0.jar with timestamp 1584466852736
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:///root/.ivy2/jars/javax.activation_activation-1.1.jar at spark://e016075d2404:36065/jars/javax.activation_activation-1.1.jar with timestamp 1584466852737
+20/03/17 17:40:52 INFO SparkContext: Added JAR file:/app/application.jar at spark://e016075d2404:36065/jars/application.jar with timestamp 1584466852737
+20/03/17 17:40:52 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+20/03/17 17:40:52 INFO TransportClientFactory: Successfully created connection to spark-master/172.21.0.2:7077 after 41 ms (0 ms spent in bootstraps)
+20/03/17 17:40:53 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20200317174053-0000
+20/03/17 17:40:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40175.
+20/03/17 17:40:53 INFO NettyBlockTransferService: Server created on e016075d2404:40175
+20/03/17 17:40:53 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/03/17 17:40:53 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20200317174053-0000/0 on worker-20200317152257-172.21.0.4-44383 (172.21.0.4:44383) with 2 core(s)
+20/03/17 17:40:53 INFO StandaloneSchedulerBackend: Granted executor ID app-20200317174053-0000/0 on hostPort 172.21.0.4:44383 with 2 core(s), 1024.0 MB RAM
+20/03/17 17:40:53 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, e016075d2404, 40175, None)
+20/03/17 17:40:53 INFO BlockManagerMasterEndpoint: Registering block manager e016075d2404:40175 with 366.3 MB RAM, BlockManagerId(driver, e016075d2404, 40175, None)
+20/03/17 17:40:53 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, e016075d2404, 40175, None)
+20/03/17 17:40:53 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, e016075d2404, 40175, None)
+20/03/17 17:40:53 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20200317174053-0000/0 is now RUNNING
+20/03/17 17:40:53 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+20/03/17 17:40:54 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/usr/src/app/spark-warehouse').
+20/03/17 17:40:54 INFO SharedState: Warehouse path is 'file:/usr/src/app/spark-warehouse'.
+20/03/17 17:40:55 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/03/17 17:40:56 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.21.0.4:40520) with ID 0
+20/03/17 17:40:56 INFO BlockManagerMasterEndpoint: Registering block manager 172.21.0.4:33579 with 366.3 MB RAM, BlockManagerId(0, 172.21.0.4, 33579, None)
+20/03/17 17:40:58 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 276.1 KB, free 366.0 MB)
+20/03/17 17:40:58 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.1 KB, free 366.0 MB)
+20/03/17 17:40:58 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on e016075d2404:40175 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:40:58 INFO SparkContext: Created broadcast 0 from newAPIHadoopFile at XmlFile.scala:46
+20/03/17 17:40:58 INFO CodeGenerator: Code generated in 217.643542 ms
+20/03/17 17:40:58 INFO CodeGenerator: Code generated in 84.23911 ms
+20/03/17 17:40:59 INFO FileInputFormat: Total input paths to process : 1
+20/03/17 17:40:59 INFO SparkContext: Starting job: show at Main.java:69
+20/03/17 17:40:59 INFO DAGScheduler: Got job 0 (show at Main.java:69) with 1 output partitions
+20/03/17 17:40:59 INFO DAGScheduler: Final stage: ResultStage 0 (show at Main.java:69)
+20/03/17 17:40:59 INFO DAGScheduler: Parents of final stage: List()
+20/03/17 17:40:59 INFO DAGScheduler: Missing parents: List()
+20/03/17 17:40:59 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[6] at show at Main.java:69), which has no missing parents
+20/03/17 17:40:59 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.3 KB, free 366.0 MB)
+20/03/17 17:40:59 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.0 KB, free 366.0 MB)
+20/03/17 17:40:59 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on e016075d2404:40175 (size: 5.0 KB, free: 366.3 MB)
+20/03/17 17:40:59 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/03/17 17:40:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[6] at show at Main.java:69) (first 15 tasks are for partitions Vector(0))
+20/03/17 17:40:59 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/03/17 17:40:59 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 172.21.0.4, executor 0, partition 0, PROCESS_LOCAL, 7936 bytes)
+20/03/17 17:40:59 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.21.0.4:33579 (size: 5.0 KB, free: 366.3 MB)
+20/03/17 17:41:00 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.21.0.4:33579 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:41:01 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1758 ms on 172.21.0.4 (executor 0) (1/1)
+20/03/17 17:41:01 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+20/03/17 17:41:01 INFO DAGScheduler: ResultStage 0 (show at Main.java:69) finished in 1.900 s
+20/03/17 17:41:01 INFO DAGScheduler: Job 0 finished: show at Main.java:69, took 1.987530 s
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+|  _id|              author|         description|          genre|price|publish_date|               title|
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+|bk101|Gambardella, Matthew|An in-depth look ...|       Computer|44.95|  2000-10-01|XML Developer's G...|
+|bk102|          Ralls, Kim|A former architec...|        Fantasy| 5.95|  2000-12-16|       Midnight Rain|
+|bk103|         Corets, Eva|After the collaps...|        Fantasy| 5.95|  2000-11-17|     Maeve Ascendant|
+|bk104|         Corets, Eva|In post-apocalyps...|        Fantasy| 5.95|  2001-03-10|     Oberon's Legacy|
+|bk105|         Corets, Eva|The two daughters...|        Fantasy| 5.95|  2001-09-10|  The Sundered Grail|
+|bk106|    Randall, Cynthia|When Carla meets ...|        Romance| 4.95|  2000-09-02|         Lover Birds|
+|bk107|      Thurman, Paula|A deep sea diver ...|        Romance| 4.95|  2000-11-02|       Splish Splash|
+|bk108|       Knorr, Stefan|An anthology of h...|         Horror| 4.95|  2000-12-06|     Creepy Crawlies|
+|bk109|        Kress, Peter|After an inadvert...|Science Fiction| 6.95|  2000-11-02|        Paradox Lost|
+|bk110|        O'Brien, Tim|Microsoft's .NET ...|       Computer|36.95|  2000-12-09|Microsoft .NET: T...|
+|bk111|        O'Brien, Tim|The Microsoft MSX...|       Computer|36.95|  2000-12-01|MSXML3: A Compreh...|
+|bk112|         Galos, Mike|Microsoft Visual ...|       Computer|49.95|  2001-04-16|Visual Studio 7: ...|
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+
+20/03/17 17:41:01 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 276.1 KB, free 365.7 MB)
+20/03/17 17:41:01 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.1 KB, free 365.7 MB)
+20/03/17 17:41:01 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on e016075d2404:40175 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:41:01 INFO SparkContext: Created broadcast 2 from newAPIHadoopFile at XmlFile.scala:46
+20/03/17 17:41:01 INFO CodeGenerator: Code generated in 47.365456 ms
+20/03/17 17:41:01 INFO CodeGenerator: Code generated in 60.922244 ms
+20/03/17 17:41:01 INFO FileInputFormat: Total input paths to process : 1
+20/03/17 17:41:01 INFO SparkContext: Starting job: collectAsList at Main.java:70
+20/03/17 17:41:01 INFO DAGScheduler: Got job 1 (collectAsList at Main.java:70) with 1 output partitions
+20/03/17 17:41:01 INFO DAGScheduler: Final stage: ResultStage 1 (collectAsList at Main.java:70)
+20/03/17 17:41:01 INFO DAGScheduler: Parents of final stage: List()
+20/03/17 17:41:01 INFO DAGScheduler: Missing parents: List()
+20/03/17 17:41:01 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[12] at collectAsList at Main.java:70), which has no missing parents
+20/03/17 17:41:01 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 10.0 KB, free 365.7 MB)
+20/03/17 17:41:01 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.9 KB, free 365.7 MB)
+20/03/17 17:41:01 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on e016075d2404:40175 (size: 4.9 KB, free: 366.2 MB)
+20/03/17 17:41:01 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/03/17 17:41:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[12] at collectAsList at Main.java:70) (first 15 tasks are for partitions Vector(0))
+20/03/17 17:41:01 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+20/03/17 17:41:01 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, 172.21.0.4, executor 0, partition 0, PROCESS_LOCAL, 7936 bytes)
+20/03/17 17:41:01 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.21.0.4:33579 (size: 4.9 KB, free: 366.3 MB)
+20/03/17 17:41:01 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.21.0.4:33579 (size: 23.1 KB, free: 366.2 MB)
+20/03/17 17:41:01 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 217 ms on 172.21.0.4 (executor 0) (1/1)
+20/03/17 17:41:01 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+20/03/17 17:41:01 INFO DAGScheduler: ResultStage 1 (collectAsList at Main.java:70) finished in 0.233 s
+20/03/17 17:41:01 INFO DAGScheduler: Job 1 finished: collectAsList at Main.java:70, took 0.241658 s
+<Book>
+  <author>Gambardella, Matthew</author>
+  <__id>bk101</__id>
+  <title>XML Developer&apos;s Guide</title>
+  <genre>Computer</genre>
+  <price>44.95</price>
+  <publish__date>2000-10-01</publish__date>
+  <description>An in-depth look at creating applications
+            with XML.</description>
+</Book>
+20/03/17 17:41:01 INFO DocumentManagerImpl: Writing content for /example/bk101.xml
+Exception in thread "main" com.marklogic.client.MarkLogicIOException: java.net.ConnectException: Failed to connect to marklogic-server/172.21.0.3:8010
+	at com.marklogic.client.impl.OkHttpServices.sendRequestOnce(OkHttpServices.java:706)
+	at com.marklogic.client.impl.OkHttpServices.sendRequestOnce(OkHttpServices.java:698)
+	at com.marklogic.client.impl.OkHttpServices.putPostDocumentImpl(OkHttpServices.java:1403)
+	at com.marklogic.client.impl.OkHttpServices.putDocument(OkHttpServices.java:1265)
+	at com.marklogic.client.impl.DocumentManagerImpl.write(DocumentManagerImpl.java:920)
+	at com.marklogic.client.impl.DocumentManagerImpl.write(DocumentManagerImpl.java:758)
+	at com.marklogic.client.impl.DocumentManagerImpl.write(DocumentManagerImpl.java:688)
+	at Main.lambda$main$0(Main.java:78)
+	at java.util.Arrays$ArrayList.forEach(Arrays.java:3880)
+	at Main.main(Main.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:845)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:161)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:184)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:86)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:920)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:929)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.net.ConnectException: Failed to connect to marklogic-server/172.21.0.3:8010
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:248)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:166)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at com.marklogic.client.impl.HTTPBasicAuthInterceptor.intercept(HTTPBasicAuthInterceptor.java:31)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:254)
+	at okhttp3.RealCall.execute(RealCall.java:92)
+	at com.marklogic.client.impl.OkHttpServices.sendRequestOnce(OkHttpServices.java:704)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:246)
+	... 42 more
+20/03/17 17:41:01 INFO SparkContext: Invoking stop() from shutdown hook
+20/03/17 17:41:01 INFO SparkUI: Stopped Spark web UI at http://e016075d2404:4040
+20/03/17 17:41:01 INFO StandaloneSchedulerBackend: Shutting down all executors
+20/03/17 17:41:01 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+20/03/17 17:41:02 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/03/17 17:41:02 INFO MemoryStore: MemoryStore cleared
+20/03/17 17:41:02 INFO BlockManager: BlockManager stopped
+20/03/17 17:41:02 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/03/17 17:41:02 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/03/17 17:41:02 INFO SparkContext: Successfully stopped SparkContext
+20/03/17 17:41:02 INFO ShutdownHookManager: Shutdown hook called
+20/03/17 17:41:02 INFO ShutdownHookManager: Deleting directory /tmp/spark-ad55decc-c9c9-4e86-9b1e-ed8cb640851d
+20/03/17 17:41:02 INFO ShutdownHookManager: Deleting directory /tmp/spark-8839a248-910c-4240-bf46-96f73276e86d
+Submit application /app/application.jar with main class Main to Spark master spark://spark-master:7077
+Passing arguments
+https://jcenter.bintray.com added as a remote repository with the name: repo-1
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+com.databricks#spark-xml_2.11 added as a dependency
+com.thoughtworks.xstream#xstream added as a dependency
+com.marklogic#marklogic-client-api added as a dependency
+javax.ws.rs#javax.ws.rs-api added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-c4aa5b76-d4ef-4f00-960b-2955a34c7f8d;1.0
+	confs: [default]
+	found com.databricks#spark-xml_2.11;0.9.0 in central
+	found commons-io#commons-io;2.6 in central
+	found org.glassfish.jaxb#txw2;2.3.2 in central
+	found com.thoughtworks.xstream#xstream;1.4.2 in central
+	found xmlpull#xmlpull;1.1.3.1 in central
+	found xpp3#xpp3_min;1.1.4c in central
+	found com.marklogic#marklogic-client-api;4.1.1 in central
+	found com.squareup.okhttp3#okhttp;3.10.0 in central
+	found com.squareup.okio#okio;1.14.0 in central
+	found com.squareup.okhttp3#logging-interceptor;3.10.0 in central
+	found com.burgstaller#okhttp-digest;1.16 in repo-1
+	found com.sun.mail#javax.mail;1.6.1 in central
+	found javax.activation#activation;1.1 in central
+	found org.slf4j#slf4j-api;1.7.25 in central
+	found com.fasterxml.jackson.core#jackson-core;2.9.4 in central
+	found com.fasterxml.jackson.core#jackson-annotations;2.9.4 in central
+	found com.fasterxml.jackson.core#jackson-databind;2.9.4 in central
+:: resolution report :: resolve 700ms :: artifacts dl 23ms
+	:: modules in use:
+	com.burgstaller#okhttp-digest;1.16 from repo-1 in [default]
+	com.databricks#spark-xml_2.11;0.9.0 from central in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.9.4 from central in [default]
+	com.fasterxml.jackson.core#jackson-core;2.9.4 from central in [default]
+	com.fasterxml.jackson.core#jackson-databind;2.9.4 from central in [default]
+	com.marklogic#marklogic-client-api;4.1.1 from central in [default]
+	com.squareup.okhttp3#logging-interceptor;3.10.0 from central in [default]
+	com.squareup.okhttp3#okhttp;3.10.0 from central in [default]
+	com.squareup.okio#okio;1.14.0 from central in [default]
+	com.sun.mail#javax.mail;1.6.1 from central in [default]
+	com.thoughtworks.xstream#xstream;1.4.2 from central in [default]
+	commons-io#commons-io;2.6 from central in [default]
+	javax.activation#activation;1.1 from central in [default]
+	org.glassfish.jaxb#txw2;2.3.2 from central in [default]
+	org.slf4j#slf4j-api;1.7.25 from central in [default]
+	xmlpull#xmlpull;1.1.3.1 from central in [default]
+	xpp3#xpp3_min;1.1.4c from central in [default]
+	:: evicted modules:
+	com.squareup.okhttp3#okhttp;3.9.1 by [com.squareup.okhttp3#okhttp;3.10.0] in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.9.0 by [com.fasterxml.jackson.core#jackson-annotations;2.9.4] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   19  |   0   |   0   |   2   ||   17  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-c4aa5b76-d4ef-4f00-960b-2955a34c7f8d
+	confs: [default]
+	0 artifacts copied, 17 already retrieved (0kB/26ms)
+20/03/17 17:49:23 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+log4j:WARN No appenders could be found for logger (com.marklogic.client.impl.OkHttpServices).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/03/17 17:49:23 INFO SparkContext: Running Spark version 2.4.5
+20/03/17 17:49:23 INFO SparkContext: Submitted application: Main
+20/03/17 17:49:23 INFO SecurityManager: Changing view acls to: root
+20/03/17 17:49:23 INFO SecurityManager: Changing modify acls to: root
+20/03/17 17:49:23 INFO SecurityManager: Changing view acls groups to:
+20/03/17 17:49:23 INFO SecurityManager: Changing modify acls groups to:
+20/03/17 17:49:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+20/03/17 17:49:24 INFO Utils: Successfully started service 'sparkDriver' on port 37833.
+20/03/17 17:49:24 INFO SparkEnv: Registering MapOutputTracker
+20/03/17 17:49:24 INFO SparkEnv: Registering BlockManagerMaster
+20/03/17 17:49:24 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/03/17 17:49:24 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/03/17 17:49:24 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6a8f860b-85d4-4116-b7d2-daa6d14668e7
+20/03/17 17:49:24 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/03/17 17:49:24 INFO SparkEnv: Registering OutputCommitCoordinator
+20/03/17 17:49:24 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/03/17 17:49:24 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://e016075d2404:4040
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.databricks_spark-xml_2.11-0.9.0.jar at spark://e016075d2404:37833/jars/com.databricks_spark-xml_2.11-0.9.0.jar with timestamp 1584467364609
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.thoughtworks.xstream_xstream-1.4.2.jar at spark://e016075d2404:37833/jars/com.thoughtworks.xstream_xstream-1.4.2.jar with timestamp 1584467364610
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.marklogic_marklogic-client-api-4.1.1.jar at spark://e016075d2404:37833/jars/com.marklogic_marklogic-client-api-4.1.1.jar with timestamp 1584467364610
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-io_commons-io-2.6.jar at spark://e016075d2404:37833/jars/commons-io_commons-io-2.6.jar with timestamp 1584467364610
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.glassfish.jaxb_txw2-2.3.2.jar at spark://e016075d2404:37833/jars/org.glassfish.jaxb_txw2-2.3.2.jar with timestamp 1584467364611
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/xmlpull_xmlpull-1.1.3.1.jar at spark://e016075d2404:37833/jars/xmlpull_xmlpull-1.1.3.1.jar with timestamp 1584467364611
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/xpp3_xpp3_min-1.1.4c.jar at spark://e016075d2404:37833/jars/xpp3_xpp3_min-1.1.4c.jar with timestamp 1584467364613
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okhttp3_okhttp-3.10.0.jar at spark://e016075d2404:37833/jars/com.squareup.okhttp3_okhttp-3.10.0.jar with timestamp 1584467364614
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okhttp3_logging-interceptor-3.10.0.jar at spark://e016075d2404:37833/jars/com.squareup.okhttp3_logging-interceptor-3.10.0.jar with timestamp 1584467364614
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.burgstaller_okhttp-digest-1.16.jar at spark://e016075d2404:37833/jars/com.burgstaller_okhttp-digest-1.16.jar with timestamp 1584467364621
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.sun.mail_javax.mail-1.6.1.jar at spark://e016075d2404:37833/jars/com.sun.mail_javax.mail-1.6.1.jar with timestamp 1584467364621
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.25.jar at spark://e016075d2404:37833/jars/org.slf4j_slf4j-api-1.7.25.jar with timestamp 1584467364622
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.9.4.jar at spark://e016075d2404:37833/jars/com.fasterxml.jackson.core_jackson-core-2.9.4.jar with timestamp 1584467364622
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.9.4.jar at spark://e016075d2404:37833/jars/com.fasterxml.jackson.core_jackson-annotations-2.9.4.jar with timestamp 1584467364622
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.9.4.jar at spark://e016075d2404:37833/jars/com.fasterxml.jackson.core_jackson-databind-2.9.4.jar with timestamp 1584467364622
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okio_okio-1.14.0.jar at spark://e016075d2404:37833/jars/com.squareup.okio_okio-1.14.0.jar with timestamp 1584467364622
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:///root/.ivy2/jars/javax.activation_activation-1.1.jar at spark://e016075d2404:37833/jars/javax.activation_activation-1.1.jar with timestamp 1584467364622
+20/03/17 17:49:24 INFO SparkContext: Added JAR file:/app/application.jar at spark://e016075d2404:37833/jars/application.jar with timestamp 1584467364623
+20/03/17 17:49:24 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+20/03/17 17:49:24 INFO TransportClientFactory: Successfully created connection to spark-master/172.21.0.2:7077 after 27 ms (0 ms spent in bootstraps)
+20/03/17 17:49:24 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20200317174924-0001
+20/03/17 17:49:24 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20200317174924-0001/0 on worker-20200317152257-172.21.0.4-44383 (172.21.0.4:44383) with 2 core(s)
+20/03/17 17:49:24 INFO StandaloneSchedulerBackend: Granted executor ID app-20200317174924-0001/0 on hostPort 172.21.0.4:44383 with 2 core(s), 1024.0 MB RAM
+20/03/17 17:49:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36873.
+20/03/17 17:49:24 INFO NettyBlockTransferService: Server created on e016075d2404:36873
+20/03/17 17:49:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/03/17 17:49:24 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20200317174924-0001/0 is now RUNNING
+20/03/17 17:49:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, e016075d2404, 36873, None)
+20/03/17 17:49:24 INFO BlockManagerMasterEndpoint: Registering block manager e016075d2404:36873 with 366.3 MB RAM, BlockManagerId(driver, e016075d2404, 36873, None)
+20/03/17 17:49:25 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, e016075d2404, 36873, None)
+20/03/17 17:49:25 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, e016075d2404, 36873, None)
+20/03/17 17:49:25 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+20/03/17 17:49:25 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/usr/src/app/spark-warehouse').
+20/03/17 17:49:25 INFO SharedState: Warehouse path is 'file:/usr/src/app/spark-warehouse'.
+20/03/17 17:49:26 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/03/17 17:49:28 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.21.0.4:52284) with ID 0
+20/03/17 17:49:28 INFO BlockManagerMasterEndpoint: Registering block manager 172.21.0.4:45237 with 366.3 MB RAM, BlockManagerId(0, 172.21.0.4, 45237, None)
+20/03/17 17:49:29 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 276.1 KB, free 366.0 MB)
+20/03/17 17:49:29 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.1 KB, free 366.0 MB)
+20/03/17 17:49:29 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on e016075d2404:36873 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:49:29 INFO SparkContext: Created broadcast 0 from newAPIHadoopFile at XmlFile.scala:46
+20/03/17 17:49:29 INFO CodeGenerator: Code generated in 212.524607 ms
+20/03/17 17:49:29 INFO CodeGenerator: Code generated in 32.325117 ms
+20/03/17 17:49:30 INFO FileInputFormat: Total input paths to process : 1
+20/03/17 17:49:30 INFO SparkContext: Starting job: show at Main.java:69
+20/03/17 17:49:30 INFO DAGScheduler: Got job 0 (show at Main.java:69) with 1 output partitions
+20/03/17 17:49:30 INFO DAGScheduler: Final stage: ResultStage 0 (show at Main.java:69)
+20/03/17 17:49:30 INFO DAGScheduler: Parents of final stage: List()
+20/03/17 17:49:30 INFO DAGScheduler: Missing parents: List()
+20/03/17 17:49:30 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[6] at show at Main.java:69), which has no missing parents
+20/03/17 17:49:30 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.3 KB, free 366.0 MB)
+20/03/17 17:49:30 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.0 KB, free 366.0 MB)
+20/03/17 17:49:30 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on e016075d2404:36873 (size: 5.0 KB, free: 366.3 MB)
+20/03/17 17:49:30 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/03/17 17:49:30 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[6] at show at Main.java:69) (first 15 tasks are for partitions Vector(0))
+20/03/17 17:49:30 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/03/17 17:49:30 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 172.21.0.4, executor 0, partition 0, PROCESS_LOCAL, 7936 bytes)
+20/03/17 17:49:30 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.21.0.4:45237 (size: 5.0 KB, free: 366.3 MB)
+20/03/17 17:49:30 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.21.0.4:45237 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:49:31 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1426 ms on 172.21.0.4 (executor 0) (1/1)
+20/03/17 17:49:31 INFO DAGScheduler: ResultStage 0 (show at Main.java:69) finished in 1.516 s
+20/03/17 17:49:31 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+20/03/17 17:49:31 INFO DAGScheduler: Job 0 finished: show at Main.java:69, took 1.584669 s
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+|  _id|              author|         description|          genre|price|publish_date|               title|
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+|bk101|Gambardella, Matthew|An in-depth look ...|       Computer|44.95|  2000-10-01|XML Developer's G...|
+|bk102|          Ralls, Kim|A former architec...|        Fantasy| 5.95|  2000-12-16|       Midnight Rain|
+|bk103|         Corets, Eva|After the collaps...|        Fantasy| 5.95|  2000-11-17|     Maeve Ascendant|
+|bk104|         Corets, Eva|In post-apocalyps...|        Fantasy| 5.95|  2001-03-10|     Oberon's Legacy|
+|bk105|         Corets, Eva|The two daughters...|        Fantasy| 5.95|  2001-09-10|  The Sundered Grail|
+|bk106|    Randall, Cynthia|When Carla meets ...|        Romance| 4.95|  2000-09-02|         Lover Birds|
+|bk107|      Thurman, Paula|A deep sea diver ...|        Romance| 4.95|  2000-11-02|       Splish Splash|
+|bk108|       Knorr, Stefan|An anthology of h...|         Horror| 4.95|  2000-12-06|     Creepy Crawlies|
+|bk109|        Kress, Peter|After an inadvert...|Science Fiction| 6.95|  2000-11-02|        Paradox Lost|
+|bk110|        O'Brien, Tim|Microsoft's .NET ...|       Computer|36.95|  2000-12-09|Microsoft .NET: T...|
+|bk111|        O'Brien, Tim|The Microsoft MSX...|       Computer|36.95|  2000-12-01|MSXML3: A Compreh...|
+|bk112|         Galos, Mike|Microsoft Visual ...|       Computer|49.95|  2001-04-16|Visual Studio 7: ...|
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+
+20/03/17 17:49:31 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 276.1 KB, free 365.7 MB)
+20/03/17 17:49:31 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.1 KB, free 365.7 MB)
+20/03/17 17:49:31 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on e016075d2404:36873 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:49:31 INFO SparkContext: Created broadcast 2 from newAPIHadoopFile at XmlFile.scala:46
+20/03/17 17:49:31 INFO CodeGenerator: Code generated in 56.496128 ms
+20/03/17 17:49:31 INFO CodeGenerator: Code generated in 41.30312 ms
+20/03/17 17:49:31 INFO FileInputFormat: Total input paths to process : 1
+20/03/17 17:49:31 INFO SparkContext: Starting job: collectAsList at Main.java:70
+20/03/17 17:49:31 INFO DAGScheduler: Got job 1 (collectAsList at Main.java:70) with 1 output partitions
+20/03/17 17:49:31 INFO DAGScheduler: Final stage: ResultStage 1 (collectAsList at Main.java:70)
+20/03/17 17:49:31 INFO DAGScheduler: Parents of final stage: List()
+20/03/17 17:49:31 INFO DAGScheduler: Missing parents: List()
+20/03/17 17:49:31 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[12] at collectAsList at Main.java:70), which has no missing parents
+20/03/17 17:49:31 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 10.0 KB, free 365.7 MB)
+20/03/17 17:49:31 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.9 KB, free 365.7 MB)
+20/03/17 17:49:31 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on e016075d2404:36873 (size: 4.9 KB, free: 366.2 MB)
+20/03/17 17:49:31 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/03/17 17:49:31 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[12] at collectAsList at Main.java:70) (first 15 tasks are for partitions Vector(0))
+20/03/17 17:49:31 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+20/03/17 17:49:31 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, 172.21.0.4, executor 0, partition 0, PROCESS_LOCAL, 7936 bytes)
+20/03/17 17:49:32 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.21.0.4:45237 (size: 4.9 KB, free: 366.3 MB)
+20/03/17 17:49:32 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.21.0.4:45237 (size: 23.1 KB, free: 366.2 MB)
+20/03/17 17:49:32 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 212 ms on 172.21.0.4 (executor 0) (1/1)
+20/03/17 17:49:32 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+20/03/17 17:49:32 INFO DAGScheduler: ResultStage 1 (collectAsList at Main.java:70) finished in 0.228 s
+20/03/17 17:49:32 INFO DAGScheduler: Job 1 finished: collectAsList at Main.java:70, took 0.233978 s
+<Book>
+  <author>Gambardella, Matthew</author>
+  <__id>bk101</__id>
+  <title>XML Developer&apos;s Guide</title>
+  <genre>Computer</genre>
+  <price>44.95</price>
+  <publish__date>2000-10-01</publish__date>
+  <description>An in-depth look at creating applications
+            with XML.</description>
+</Book>
+20/03/17 17:49:32 INFO DocumentManagerImpl: Writing content for /example/bk101.xml
+<Book>
+  <author>Ralls, Kim</author>
+  <__id>bk102</__id>
+  <title>Midnight Rain</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2000-12-16</publish__date>
+  <description>A former architect battles corporate zombies,
+            an evil sorceress, and her own childhood to become queen
+            of the world.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk102.xml
+<Book>
+  <author>Corets, Eva</author>
+  <__id>bk103</__id>
+  <title>Maeve Ascendant</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2000-11-17</publish__date>
+  <description>After the collapse of a nanotechnology
+            society in England, the young survivors lay the
+            foundation for a new society.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk103.xml
+<Book>
+  <author>Corets, Eva</author>
+  <__id>bk104</__id>
+  <title>Oberon&apos;s Legacy</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2001-03-10</publish__date>
+  <description>In post-apocalypse England, the mysterious
+            agent known only as Oberon helps to create a new life
+            for the inhabitants of London. Sequel to Maeve
+            Ascendant.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk104.xml
+<Book>
+  <author>Corets, Eva</author>
+  <__id>bk105</__id>
+  <title>The Sundered Grail</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2001-09-10</publish__date>
+  <description>The two daughters of Maeve, half-sisters,
+            battle one another for control of England. Sequel to
+            Oberon&apos;s Legacy.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk105.xml
+<Book>
+  <author>Randall, Cynthia</author>
+  <__id>bk106</__id>
+  <title>Lover Birds</title>
+  <genre>Romance</genre>
+  <price>4.95</price>
+  <publish__date>2000-09-02</publish__date>
+  <description>When Carla meets Paul at an ornithology
+            conference, tempers fly as feathers get ruffled.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk106.xml
+<Book>
+  <author>Thurman, Paula</author>
+  <__id>bk107</__id>
+  <title>Splish Splash</title>
+  <genre>Romance</genre>
+  <price>4.95</price>
+  <publish__date>2000-11-02</publish__date>
+  <description>A deep sea diver finds true love twenty
+            thousand leagues beneath the sea.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk107.xml
+<Book>
+  <author>Knorr, Stefan</author>
+  <__id>bk108</__id>
+  <title>Creepy Crawlies</title>
+  <genre>Horror</genre>
+  <price>4.95</price>
+  <publish__date>2000-12-06</publish__date>
+  <description>An anthology of horror stories about roaches,
+            centipedes, scorpions  and other insects.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk108.xml
+<Book>
+  <author>Kress, Peter</author>
+  <__id>bk109</__id>
+  <title>Paradox Lost</title>
+  <genre>Science Fiction</genre>
+  <price>6.95</price>
+  <publish__date>2000-11-02</publish__date>
+  <description>After an inadvertant trip through a Heisenberg
+            Uncertainty Device, James Salway discovers the problems
+            of being quantum.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk109.xml
+<Book>
+  <author>O&apos;Brien, Tim</author>
+  <__id>bk110</__id>
+  <title>Microsoft .NET: The Programming Bible</title>
+  <genre>Computer</genre>
+  <price>36.95</price>
+  <publish__date>2000-12-09</publish__date>
+  <description>Microsoft&apos;s .NET initiative is explored in
+            detail in this deep programmer&apos;s reference.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk110.xml
+<Book>
+  <author>O&apos;Brien, Tim</author>
+  <__id>bk111</__id>
+  <title>MSXML3: A Comprehensive Guide</title>
+  <genre>Computer</genre>
+  <price>36.95</price>
+  <publish__date>2000-12-01</publish__date>
+  <description>The Microsoft MSXML3 parser is covered in
+            detail, with attention to XML DOM interfaces, XSLT processing,
+            SAX and more.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk111.xml
+<Book>
+  <author>Galos, Mike</author>
+  <__id>bk112</__id>
+  <title>Visual Studio 7: A Comprehensive Guide</title>
+  <genre>Computer</genre>
+  <price>49.95</price>
+  <publish__date>2001-04-16</publish__date>
+  <description>Microsoft Visual Studio 7 is explored in depth,
+            looking at how Visual Basic, Visual C++, C#, and ASP+ are
+            integrated into a comprehensive development
+            environment.</description>
+</Book>
+20/03/17 17:49:33 INFO DocumentManagerImpl: Writing content for /example/bk112.xml
+20/03/17 17:49:33 INFO SparkContext: Invoking stop() from shutdown hook
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 34
+20/03/17 17:49:34 INFO SparkUI: Stopped Spark web UI at http://e016075d2404:4040
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 30
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 41
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 14
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 38
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 37
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 45
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 20
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 21
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 18
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 13
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 50
+20/03/17 17:49:34 INFO ContextCleaner: Cleaned accumulator 52
+20/03/17 17:49:34 INFO StandaloneSchedulerBackend: Shutting down all executors
+20/03/17 17:49:34 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+20/03/17 17:49:34 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/03/17 17:49:34 INFO MemoryStore: MemoryStore cleared
+20/03/17 17:49:34 INFO BlockManager: BlockManager stopped
+20/03/17 17:49:34 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/03/17 17:49:34 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/03/17 17:49:34 INFO SparkContext: Successfully stopped SparkContext
+20/03/17 17:49:34 INFO ShutdownHookManager: Shutdown hook called
+20/03/17 17:49:34 INFO ShutdownHookManager: Deleting directory /tmp/spark-b28d99c1-d67d-4cde-884d-61c415f16105
+20/03/17 17:49:34 INFO ShutdownHookManager: Deleting directory /tmp/spark-e79f4b1f-6bd3-456f-9cb6-62b769d9fc72
+Submit application /app/application.jar with main class Main to Spark master spark://spark-master:7077
+Passing arguments
+https://jcenter.bintray.com added as a remote repository with the name: repo-1
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+com.databricks#spark-xml_2.11 added as a dependency
+com.thoughtworks.xstream#xstream added as a dependency
+com.marklogic#marklogic-client-api added as a dependency
+javax.ws.rs#javax.ws.rs-api added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-f75db160-fa27-4261-914c-b9e754c455a5;1.0
+	confs: [default]
+	found com.databricks#spark-xml_2.11;0.9.0 in central
+	found commons-io#commons-io;2.6 in central
+	found org.glassfish.jaxb#txw2;2.3.2 in central
+	found com.thoughtworks.xstream#xstream;1.4.2 in central
+	found xmlpull#xmlpull;1.1.3.1 in central
+	found xpp3#xpp3_min;1.1.4c in central
+	found com.marklogic#marklogic-client-api;4.1.1 in central
+	found com.squareup.okhttp3#okhttp;3.10.0 in central
+	found com.squareup.okio#okio;1.14.0 in central
+	found com.squareup.okhttp3#logging-interceptor;3.10.0 in central
+	found com.burgstaller#okhttp-digest;1.16 in repo-1
+	found com.sun.mail#javax.mail;1.6.1 in central
+	found javax.activation#activation;1.1 in central
+	found org.slf4j#slf4j-api;1.7.25 in central
+	found com.fasterxml.jackson.core#jackson-core;2.9.4 in central
+	found com.fasterxml.jackson.core#jackson-annotations;2.9.4 in central
+	found com.fasterxml.jackson.core#jackson-databind;2.9.4 in central
+:: resolution report :: resolve 711ms :: artifacts dl 34ms
+	:: modules in use:
+	com.burgstaller#okhttp-digest;1.16 from repo-1 in [default]
+	com.databricks#spark-xml_2.11;0.9.0 from central in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.9.4 from central in [default]
+	com.fasterxml.jackson.core#jackson-core;2.9.4 from central in [default]
+	com.fasterxml.jackson.core#jackson-databind;2.9.4 from central in [default]
+	com.marklogic#marklogic-client-api;4.1.1 from central in [default]
+	com.squareup.okhttp3#logging-interceptor;3.10.0 from central in [default]
+	com.squareup.okhttp3#okhttp;3.10.0 from central in [default]
+	com.squareup.okio#okio;1.14.0 from central in [default]
+	com.sun.mail#javax.mail;1.6.1 from central in [default]
+	com.thoughtworks.xstream#xstream;1.4.2 from central in [default]
+	commons-io#commons-io;2.6 from central in [default]
+	javax.activation#activation;1.1 from central in [default]
+	org.glassfish.jaxb#txw2;2.3.2 from central in [default]
+	org.slf4j#slf4j-api;1.7.25 from central in [default]
+	xmlpull#xmlpull;1.1.3.1 from central in [default]
+	xpp3#xpp3_min;1.1.4c from central in [default]
+	:: evicted modules:
+	com.squareup.okhttp3#okhttp;3.9.1 by [com.squareup.okhttp3#okhttp;3.10.0] in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.9.0 by [com.fasterxml.jackson.core#jackson-annotations;2.9.4] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   19  |   0   |   0   |   2   ||   17  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-f75db160-fa27-4261-914c-b9e754c455a5
+	confs: [default]
+	0 artifacts copied, 17 already retrieved (0kB/26ms)
+20/03/17 17:55:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+log4j:WARN No appenders could be found for logger (com.marklogic.client.impl.OkHttpServices).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/03/17 17:55:35 INFO SparkContext: Running Spark version 2.4.5
+20/03/17 17:55:35 INFO SparkContext: Submitted application: Main
+20/03/17 17:55:35 INFO SecurityManager: Changing view acls to: root
+20/03/17 17:55:35 INFO SecurityManager: Changing modify acls to: root
+20/03/17 17:55:35 INFO SecurityManager: Changing view acls groups to:
+20/03/17 17:55:35 INFO SecurityManager: Changing modify acls groups to:
+20/03/17 17:55:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+20/03/17 17:55:35 INFO Utils: Successfully started service 'sparkDriver' on port 44229.
+20/03/17 17:55:35 INFO SparkEnv: Registering MapOutputTracker
+20/03/17 17:55:35 INFO SparkEnv: Registering BlockManagerMaster
+20/03/17 17:55:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/03/17 17:55:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/03/17 17:55:35 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-3dcda421-9ef6-4b01-90c3-d6524d779916
+20/03/17 17:55:35 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/03/17 17:55:35 INFO SparkEnv: Registering OutputCommitCoordinator
+20/03/17 17:55:35 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/03/17 17:55:36 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://e016075d2404:4040
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.databricks_spark-xml_2.11-0.9.0.jar at spark://e016075d2404:44229/jars/com.databricks_spark-xml_2.11-0.9.0.jar with timestamp 1584467736059
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.thoughtworks.xstream_xstream-1.4.2.jar at spark://e016075d2404:44229/jars/com.thoughtworks.xstream_xstream-1.4.2.jar with timestamp 1584467736061
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.marklogic_marklogic-client-api-4.1.1.jar at spark://e016075d2404:44229/jars/com.marklogic_marklogic-client-api-4.1.1.jar with timestamp 1584467736061
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-io_commons-io-2.6.jar at spark://e016075d2404:44229/jars/commons-io_commons-io-2.6.jar with timestamp 1584467736061
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.glassfish.jaxb_txw2-2.3.2.jar at spark://e016075d2404:44229/jars/org.glassfish.jaxb_txw2-2.3.2.jar with timestamp 1584467736068
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/xmlpull_xmlpull-1.1.3.1.jar at spark://e016075d2404:44229/jars/xmlpull_xmlpull-1.1.3.1.jar with timestamp 1584467736069
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/xpp3_xpp3_min-1.1.4c.jar at spark://e016075d2404:44229/jars/xpp3_xpp3_min-1.1.4c.jar with timestamp 1584467736069
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okhttp3_okhttp-3.10.0.jar at spark://e016075d2404:44229/jars/com.squareup.okhttp3_okhttp-3.10.0.jar with timestamp 1584467736070
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okhttp3_logging-interceptor-3.10.0.jar at spark://e016075d2404:44229/jars/com.squareup.okhttp3_logging-interceptor-3.10.0.jar with timestamp 1584467736070
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.burgstaller_okhttp-digest-1.16.jar at spark://e016075d2404:44229/jars/com.burgstaller_okhttp-digest-1.16.jar with timestamp 1584467736070
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.sun.mail_javax.mail-1.6.1.jar at spark://e016075d2404:44229/jars/com.sun.mail_javax.mail-1.6.1.jar with timestamp 1584467736071
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.25.jar at spark://e016075d2404:44229/jars/org.slf4j_slf4j-api-1.7.25.jar with timestamp 1584467736071
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.9.4.jar at spark://e016075d2404:44229/jars/com.fasterxml.jackson.core_jackson-core-2.9.4.jar with timestamp 1584467736072
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.9.4.jar at spark://e016075d2404:44229/jars/com.fasterxml.jackson.core_jackson-annotations-2.9.4.jar with timestamp 1584467736073
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.9.4.jar at spark://e016075d2404:44229/jars/com.fasterxml.jackson.core_jackson-databind-2.9.4.jar with timestamp 1584467736073
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.squareup.okio_okio-1.14.0.jar at spark://e016075d2404:44229/jars/com.squareup.okio_okio-1.14.0.jar with timestamp 1584467736075
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:///root/.ivy2/jars/javax.activation_activation-1.1.jar at spark://e016075d2404:44229/jars/javax.activation_activation-1.1.jar with timestamp 1584467736075
+20/03/17 17:55:36 INFO SparkContext: Added JAR file:/app/application.jar at spark://e016075d2404:44229/jars/application.jar with timestamp 1584467736076
+20/03/17 17:55:36 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+20/03/17 17:55:36 INFO TransportClientFactory: Successfully created connection to spark-master/172.21.0.2:7077 after 44 ms (0 ms spent in bootstraps)
+20/03/17 17:55:36 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20200317175536-0002
+20/03/17 17:55:36 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20200317175536-0002/0 on worker-20200317152257-172.21.0.4-44383 (172.21.0.4:44383) with 2 core(s)
+20/03/17 17:55:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45913.
+20/03/17 17:55:36 INFO NettyBlockTransferService: Server created on e016075d2404:45913
+20/03/17 17:55:36 INFO StandaloneSchedulerBackend: Granted executor ID app-20200317175536-0002/0 on hostPort 172.21.0.4:44383 with 2 core(s), 1024.0 MB RAM
+20/03/17 17:55:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/03/17 17:55:36 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20200317175536-0002/0 is now RUNNING
+20/03/17 17:55:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, e016075d2404, 45913, None)
+20/03/17 17:55:36 INFO BlockManagerMasterEndpoint: Registering block manager e016075d2404:45913 with 366.3 MB RAM, BlockManagerId(driver, e016075d2404, 45913, None)
+20/03/17 17:55:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, e016075d2404, 45913, None)
+20/03/17 17:55:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, e016075d2404, 45913, None)
+20/03/17 17:55:36 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+20/03/17 17:55:37 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/usr/src/app/spark-warehouse').
+20/03/17 17:55:37 INFO SharedState: Warehouse path is 'file:/usr/src/app/spark-warehouse'.
+20/03/17 17:55:38 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/03/17 17:55:40 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.21.0.4:39106) with ID 0
+20/03/17 17:55:40 INFO BlockManagerMasterEndpoint: Registering block manager 172.21.0.4:33755 with 366.3 MB RAM, BlockManagerId(0, 172.21.0.4, 33755, None)
+20/03/17 17:55:41 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 276.1 KB, free 366.0 MB)
+20/03/17 17:55:41 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.1 KB, free 366.0 MB)
+20/03/17 17:55:41 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on e016075d2404:45913 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:55:41 INFO SparkContext: Created broadcast 0 from newAPIHadoopFile at XmlFile.scala:46
+20/03/17 17:55:42 INFO CodeGenerator: Code generated in 201.923819 ms
+20/03/17 17:55:42 INFO CodeGenerator: Code generated in 29.135903 ms
+20/03/17 17:55:42 INFO FileInputFormat: Total input paths to process : 1
+20/03/17 17:55:42 INFO SparkContext: Starting job: show at Main.java:69
+20/03/17 17:55:42 INFO DAGScheduler: Got job 0 (show at Main.java:69) with 1 output partitions
+20/03/17 17:55:42 INFO DAGScheduler: Final stage: ResultStage 0 (show at Main.java:69)
+20/03/17 17:55:42 INFO DAGScheduler: Parents of final stage: List()
+20/03/17 17:55:42 INFO DAGScheduler: Missing parents: List()
+20/03/17 17:55:42 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[6] at show at Main.java:69), which has no missing parents
+20/03/17 17:55:42 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.3 KB, free 366.0 MB)
+20/03/17 17:55:42 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.0 KB, free 366.0 MB)
+20/03/17 17:55:42 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on e016075d2404:45913 (size: 5.0 KB, free: 366.3 MB)
+20/03/17 17:55:42 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/03/17 17:55:42 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[6] at show at Main.java:69) (first 15 tasks are for partitions Vector(0))
+20/03/17 17:55:42 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/03/17 17:55:42 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 172.21.0.4, executor 0, partition 0, PROCESS_LOCAL, 7936 bytes)
+20/03/17 17:55:42 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.21.0.4:33755 (size: 5.0 KB, free: 366.3 MB)
+20/03/17 17:55:43 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.21.0.4:33755 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:55:43 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1425 ms on 172.21.0.4 (executor 0) (1/1)
+20/03/17 17:55:43 INFO DAGScheduler: ResultStage 0 (show at Main.java:69) finished in 1.521 s
+20/03/17 17:55:43 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+20/03/17 17:55:43 INFO DAGScheduler: Job 0 finished: show at Main.java:69, took 1.621056 s
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+|  _id|              author|         description|          genre|price|publish_date|               title|
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+|bk101|Gambardella, Matthew|An in-depth look ...|       Computer|44.95|  2000-10-01|XML Developer's G...|
+|bk102|          Ralls, Kim|A former architec...|        Fantasy| 5.95|  2000-12-16|       Midnight Rain|
+|bk103|         Corets, Eva|After the collaps...|        Fantasy| 5.95|  2000-11-17|     Maeve Ascendant|
+|bk104|         Corets, Eva|In post-apocalyps...|        Fantasy| 5.95|  2001-03-10|     Oberon's Legacy|
+|bk105|         Corets, Eva|The two daughters...|        Fantasy| 5.95|  2001-09-10|  The Sundered Grail|
+|bk106|    Randall, Cynthia|When Carla meets ...|        Romance| 4.95|  2000-09-02|         Lover Birds|
+|bk107|      Thurman, Paula|A deep sea diver ...|        Romance| 4.95|  2000-11-02|       Splish Splash|
+|bk108|       Knorr, Stefan|An anthology of h...|         Horror| 4.95|  2000-12-06|     Creepy Crawlies|
+|bk109|        Kress, Peter|After an inadvert...|Science Fiction| 6.95|  2000-11-02|        Paradox Lost|
+|bk110|        O'Brien, Tim|Microsoft's .NET ...|       Computer|36.95|  2000-12-09|Microsoft .NET: T...|
+|bk111|        O'Brien, Tim|The Microsoft MSX...|       Computer|36.95|  2000-12-01|MSXML3: A Compreh...|
+|bk112|         Galos, Mike|Microsoft Visual ...|       Computer|49.95|  2001-04-16|Visual Studio 7: ...|
++-----+--------------------+--------------------+---------------+-----+------------+--------------------+
+
+20/03/17 17:55:43 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 276.1 KB, free 365.7 MB)
+20/03/17 17:55:43 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.1 KB, free 365.7 MB)
+20/03/17 17:55:43 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on e016075d2404:45913 (size: 23.1 KB, free: 366.3 MB)
+20/03/17 17:55:43 INFO SparkContext: Created broadcast 2 from newAPIHadoopFile at XmlFile.scala:46
+20/03/17 17:55:44 INFO CodeGenerator: Code generated in 64.882106 ms
+20/03/17 17:55:44 INFO CodeGenerator: Code generated in 40.089004 ms
+20/03/17 17:55:44 INFO FileInputFormat: Total input paths to process : 1
+20/03/17 17:55:44 INFO SparkContext: Starting job: collectAsList at Main.java:70
+20/03/17 17:55:44 INFO DAGScheduler: Got job 1 (collectAsList at Main.java:70) with 1 output partitions
+20/03/17 17:55:44 INFO DAGScheduler: Final stage: ResultStage 1 (collectAsList at Main.java:70)
+20/03/17 17:55:44 INFO DAGScheduler: Parents of final stage: List()
+20/03/17 17:55:44 INFO DAGScheduler: Missing parents: List()
+20/03/17 17:55:44 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[12] at collectAsList at Main.java:70), which has no missing parents
+20/03/17 17:55:44 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 10.0 KB, free 365.7 MB)
+20/03/17 17:55:44 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.9 KB, free 365.7 MB)
+20/03/17 17:55:44 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on e016075d2404:45913 (size: 4.9 KB, free: 366.2 MB)
+20/03/17 17:55:44 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/03/17 17:55:44 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[12] at collectAsList at Main.java:70) (first 15 tasks are for partitions Vector(0))
+20/03/17 17:55:44 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+20/03/17 17:55:44 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, 172.21.0.4, executor 0, partition 0, PROCESS_LOCAL, 7936 bytes)
+20/03/17 17:55:44 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.21.0.4:33755 (size: 4.9 KB, free: 366.3 MB)
+20/03/17 17:55:44 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.21.0.4:33755 (size: 23.1 KB, free: 366.2 MB)
+20/03/17 17:55:44 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 260 ms on 172.21.0.4 (executor 0) (1/1)
+20/03/17 17:55:44 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+20/03/17 17:55:44 INFO DAGScheduler: ResultStage 1 (collectAsList at Main.java:70) finished in 0.282 s
+20/03/17 17:55:44 INFO DAGScheduler: Job 1 finished: collectAsList at Main.java:70, took 0.297761 s
+<Book>
+  <author>Gambardella, Matthew</author>
+  <__id>bk101</__id>
+  <title>XML Developer&apos;s Guide</title>
+  <genre>Computer</genre>
+  <price>44.95</price>
+  <publish__date>2000-10-01</publish__date>
+  <description>An in-depth look at creating applications
+            with XML.</description>
+</Book>
+20/03/17 17:55:44 INFO DocumentManagerImpl: Writing content for /example/bk101.xml
+<Book>
+  <author>Ralls, Kim</author>
+  <__id>bk102</__id>
+  <title>Midnight Rain</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2000-12-16</publish__date>
+  <description>A former architect battles corporate zombies,
+            an evil sorceress, and her own childhood to become queen
+            of the world.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk102.xml
+<Book>
+  <author>Corets, Eva</author>
+  <__id>bk103</__id>
+  <title>Maeve Ascendant</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2000-11-17</publish__date>
+  <description>After the collapse of a nanotechnology
+            society in England, the young survivors lay the
+            foundation for a new society.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk103.xml
+<Book>
+  <author>Corets, Eva</author>
+  <__id>bk104</__id>
+  <title>Oberon&apos;s Legacy</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2001-03-10</publish__date>
+  <description>In post-apocalypse England, the mysterious
+            agent known only as Oberon helps to create a new life
+            for the inhabitants of London. Sequel to Maeve
+            Ascendant.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk104.xml
+<Book>
+  <author>Corets, Eva</author>
+  <__id>bk105</__id>
+  <title>The Sundered Grail</title>
+  <genre>Fantasy</genre>
+  <price>5.95</price>
+  <publish__date>2001-09-10</publish__date>
+  <description>The two daughters of Maeve, half-sisters,
+            battle one another for control of England. Sequel to
+            Oberon&apos;s Legacy.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk105.xml
+<Book>
+  <author>Randall, Cynthia</author>
+  <__id>bk106</__id>
+  <title>Lover Birds</title>
+  <genre>Romance</genre>
+  <price>4.95</price>
+  <publish__date>2000-09-02</publish__date>
+  <description>When Carla meets Paul at an ornithology
+            conference, tempers fly as feathers get ruffled.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk106.xml
+<Book>
+  <author>Thurman, Paula</author>
+  <__id>bk107</__id>
+  <title>Splish Splash</title>
+  <genre>Romance</genre>
+  <price>4.95</price>
+  <publish__date>2000-11-02</publish__date>
+  <description>A deep sea diver finds true love twenty
+            thousand leagues beneath the sea.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk107.xml
+<Book>
+  <author>Knorr, Stefan</author>
+  <__id>bk108</__id>
+  <title>Creepy Crawlies</title>
+  <genre>Horror</genre>
+  <price>4.95</price>
+  <publish__date>2000-12-06</publish__date>
+  <description>An anthology of horror stories about roaches,
+            centipedes, scorpions  and other insects.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk108.xml
+<Book>
+  <author>Kress, Peter</author>
+  <__id>bk109</__id>
+  <title>Paradox Lost</title>
+  <genre>Science Fiction</genre>
+  <price>6.95</price>
+  <publish__date>2000-11-02</publish__date>
+  <description>After an inadvertant trip through a Heisenberg
+            Uncertainty Device, James Salway discovers the problems
+            of being quantum.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk109.xml
+<Book>
+  <author>O&apos;Brien, Tim</author>
+  <__id>bk110</__id>
+  <title>Microsoft .NET: The Programming Bible</title>
+  <genre>Computer</genre>
+  <price>36.95</price>
+  <publish__date>2000-12-09</publish__date>
+  <description>Microsoft&apos;s .NET initiative is explored in
+            detail in this deep programmer&apos;s reference.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk110.xml
+<Book>
+  <author>O&apos;Brien, Tim</author>
+  <__id>bk111</__id>
+  <title>MSXML3: A Comprehensive Guide</title>
+  <genre>Computer</genre>
+  <price>36.95</price>
+  <publish__date>2000-12-01</publish__date>
+  <description>The Microsoft MSXML3 parser is covered in
+            detail, with attention to XML DOM interfaces, XSLT processing,
+            SAX and more.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk111.xml
+<Book>
+  <author>Galos, Mike</author>
+  <__id>bk112</__id>
+  <title>Visual Studio 7: A Comprehensive Guide</title>
+  <genre>Computer</genre>
+  <price>49.95</price>
+  <publish__date>2001-04-16</publish__date>
+  <description>Microsoft Visual Studio 7 is explored in depth,
+            looking at how Visual Basic, Visual C++, C#, and ASP+ are
+            integrated into a comprehensive development
+            environment.</description>
+</Book>
+20/03/17 17:55:45 INFO DocumentManagerImpl: Writing content for /example/bk112.xml
+20/03/17 17:55:45 INFO SparkContext: Invoking stop() from shutdown hook
+20/03/17 17:55:45 INFO SparkUI: Stopped Spark web UI at http://e016075d2404:4040
+20/03/17 17:55:45 INFO StandaloneSchedulerBackend: Shutting down all executors
+20/03/17 17:55:45 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+20/03/17 17:55:45 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/03/17 17:55:45 INFO MemoryStore: MemoryStore cleared
+20/03/17 17:55:45 INFO BlockManager: BlockManager stopped
+20/03/17 17:55:45 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/03/17 17:55:45 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/03/17 17:55:45 INFO SparkContext: Successfully stopped SparkContext
+20/03/17 17:55:45 INFO ShutdownHookManager: Shutdown hook called
+20/03/17 17:55:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-6626e3c7-35e1-40a2-abca-8a189465fbc9
+20/03/17 17:55:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-3b5650a1-9a0d-4e2d-b54b-4ad687e7db45
