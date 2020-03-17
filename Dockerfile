@@ -19,7 +19,7 @@ COPY ./data/books.xml /opt/spark-data
 # Copy the source code and build the application
 COPY . /usr/src/app
 RUN cd /usr/src/app \
-      && ./gradlew build
+      && ./gradlew mlDeploy
 
 
 CMD ["/bin/bash", "/template.sh"]
