@@ -8,6 +8,8 @@ services:
       - "8080:8080"
       - "7077:7077"
       - "6066:6066"
+    volumes:
+      - ./data:/opt/spark-data
     environment:
       - INIT_DAEMON_STEP=setup_spark
       - "constraint:node==myMasterNode"
@@ -18,6 +20,8 @@ services:
       - spark-master
     ports:
       - "8081:8081"
+    volumes:
+      - ./data:/opt/spark-data
     environment:
       - "SPARK_MASTER=spark://spark-master:7077"
       - "constraint:node==myWorkerNode1"
