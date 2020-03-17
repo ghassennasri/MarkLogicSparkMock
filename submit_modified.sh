@@ -13,7 +13,9 @@ if [ -f "${SPARK_APPLICATION_JAR_LOCATION}" ]; then
     /spark/bin/spark-submit \
         --class ${SPARK_APPLICATION_MAIN_CLASS} \
         --master ${SPARK_MASTER_URL} \
-        --packages com.databricks:spark-xml_2.11:0.9.0,com.thoughtworks.xstream:xstream:1.4.2 \
+        --packages com.databricks:spark-xml_2.11:0.9.0,com.thoughtworks.xstream:xstream:1.4.2,com.marklogic:marklogic-client-api:4.1.1,javax.ws.rs:javax.ws.rs-api:2.1 \
+        --repositories https://jcenter.bintray.com \
+        --exclude-packages javax.ws.rs:javax.ws.rs-api \
         ${SPARK_SUBMIT_ARGS} \
         ${SPARK_APPLICATION_JAR_LOCATION} ${SPARK_APPLICATION_ARGS}
 else

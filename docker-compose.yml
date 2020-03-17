@@ -1,5 +1,14 @@
 version: '2'
 services:
+  marklogic-server:
+    image: store/marklogicdb/marklogic-server:10.0-2-dev-ubi
+    environment:
+      - MARKLOGIC_INIT=true
+      - MARKLOGIC_ADMIN_USERNAME=admin
+      - MARKLOGIC_ADMIN_PASSWORD=admin
+      - TZ=Europe/Prague
+    ports:
+      - 7997-8015:7997-8015
   spark-master:
     image: bde2020/spark-master:2.4.5-hadoop2.7
     container_name: spark-master

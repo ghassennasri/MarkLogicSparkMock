@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "com.marklogic.ml-gradle" version "3.6.0"
 }
 
 group 'org.example'
@@ -9,8 +10,9 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
-
+mlDeploy.dependsOn(build)
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
@@ -19,4 +21,5 @@ dependencies {
     compile group: 'com.databricks', name: 'spark-xml_2.10', version: '0.2.0'
     compile group: 'com.databricks', name: 'spark-xml_2.11', version: '0.9.0'
     compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.2'
+    compile group: 'com.marklogic', name: 'marklogic-client-api', version: '4.1.1'
 }
