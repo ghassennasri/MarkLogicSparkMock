@@ -27,6 +27,8 @@ The application image inherit from bde2020/spark-submit:2.4.5-hadoop2.7 and will
  1. Copy the application code to /opt/spark-data directory of the container OS and execute gradle mlDeploy task to build the application jar file and set up a REST application server on MarkLogic side. 
 Port and authentication mode are set by default to 8010 and Basic.
 You can change them by adapting files rest-api-server.json, gradle.properties and config.properties.
+The spark job main class is [Main.java
+ ](https://github.com/ghassennasri/MarkLogicSparkMock/blob/master/src/main/java/Main.java)
 
  2.  The application jar file will be submitted to spark-master via the spark-submit command (see submit-modified.sh)
 
