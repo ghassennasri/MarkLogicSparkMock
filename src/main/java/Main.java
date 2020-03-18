@@ -75,7 +75,7 @@ public class Main {
         df.show();
         //playing with dataframe -- selecting and displaying books for which the price is less than 10$
         df.createGlobalTempView("book");
-        Dataset<Row> booksCheaperThan10 = spark.sql("SELECT _id, tiltle, author, genre, price FROM book WHERE price <=10");
+        Dataset<Row> booksCheaperThan10 = spark.sql("SELECT _id, title, author, genre, price FROM global_temp.book WHERE price <=10");
         booksCheaperThan10.show();
         //looping through book dataset and writing documents to MarkLogic
         books.collectAsList().forEach(x->{
