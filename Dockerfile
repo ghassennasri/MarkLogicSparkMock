@@ -1,6 +1,6 @@
 FROM bde2020/spark-submit:2.4.5-hadoop2.7
 
-LABEL maintainer="Gezim Sejdiu <g.sejdiu@gmail.com>, Giannis Mouchakis <gmouchakis@gmail.com>"
+LABEL maintainer="Ghassen NASRI <ghassen.nasri@marklogic.com>"
 
 ENV SPARK_APPLICATION_JAR_NAME MarkLogicSparkMock-1.0-SNAPSHOT
 ENV SPARK_APPLICATION_MAIN_CLASS Main

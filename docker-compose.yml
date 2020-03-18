@@ -2,6 +2,7 @@ version: '2'
 services:
   marklogic-server:
     image: store/marklogicdb/marklogic-server:10.0-2-dev-ubi
+    container_name: marklogic-server
     environment:
       - MARKLOGIC_INIT=true
       - MARKLOGIC_ADMIN_USERNAME=admin

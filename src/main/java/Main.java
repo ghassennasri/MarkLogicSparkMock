@@ -6,6 +6,8 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.apache.spark.sql.*;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.Metadata;
@@ -26,7 +28,9 @@ import java.util.Properties;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    private final static Logger LOGGER=LogManager.getRootLogger();
+
+    public static void main(String[] args) throws IOException, AnalysisException {
         String propFileName = "config.properties";
         Properties prop = new Properties();
         InputStream inputStream = Main.class.getClassLoader().getResourceAsStream(propFileName);
@@ -37,20 +41,22 @@ public class Main {
             throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
         }
 
-
-
-        // get the property value and print it out
+        // get MarkLogic client connection properties
         String host = prop.getProperty("host");
         String port = prop.getProperty("port");
         String username = prop.getProperty("username");
         String password = prop.getProperty("password");
+        //MarkLogic database connection client
         DatabaseClient client = DatabaseClientFactory.newClient(
                 host, Integer.parseInt(port),
                 new DatabaseClientFactory.BasicAuthContext(username,password));
+        //MarkLogic java client api XMLDocumentManager
         XMLDocumentManager docMgr = client.newXMLDocumentManager();
+        //parser that produces DOM object trees from XML documents
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
         SparkSession spark = SparkSession.builder().getOrCreate();
+        //custom
         StructType customSchema = new StructType(new StructField[] {
                 new StructField("_id", DataTypes.StringType, true, Metadata.empty()),
                 new StructField("author", DataTypes.StringType, true, Metadata.empty()),
@@ -67,21 +73,30 @@ public class Main {
                 .load("file:///opt/spark-data/books.xml");
         Dataset<Book> books=df.as(Encoders.bean(Book.class));
         df.show();
+        //playing with dataframe -- selecting and displaying books for which the price is less than 10$
+        df.createGlobalTempView("book");
+        Dataset<Row> booksCheaperThan10 = spark.sql("SELECT _id, tiltle, author, genre, price FROM book WHERE price <=10");
+        booksCheaperThan10.show();
+        //looping through book dataset and writing documents to MarkLogic
         books.collectAsList().forEach(x->{
             XStream xStream=new XStream(new DomDriver());
+            //XML String representation of a book row
             System.out.println(xStream.toXML(x));
             DocumentBuilder builder = null;
             try {
                 builder = factory.newDocumentBuilder();
+                //convert xml string to org.w3c.dom.Document
                 Document doc = builder.parse(new InputSource(new StringReader(xStream.toXML(x))));
+                //uri of the the book document
                 String docId = "/example/"+x.get_id()+".xml";
+                //write to MarkLogic
                 docMgr.write(docId,new DOMHandle(doc));
             } catch (ParserConfigurationException e) {
-                e.printStackTrace();
+                LOGGER.error(e);
             } catch (SAXException e) {
-                e.printStackTrace();
+                LOGGER.error(e);
             } catch (IOException e) {
-                e.printStackTrace();
+                LOGGER.error(e);
             }
         });
 
