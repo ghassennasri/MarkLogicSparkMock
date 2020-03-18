@@ -1,7 +1,7 @@
 # MarkLogicSparkMock  
-This is sample apache spark job demo reading from an xml file books.xml (https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms762271(v%3Dvs.85))  
+This is sample apache spark 2.4.5 job demo reading from an xml file books.xml (https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms762271(v%3Dvs.85))  
 and writing books as MarkLogic xml documents.  
-Images setting up a standalone Apache Spark cluster (running one Spark Master and multiple Spark workers) were pulled from https://github.com/big-data-europe/docker-spark  
+Images setting up a standalone Apache Spark 2.4.5 cluster (running one Spark Master and multiple Spark workers) were pulled from https://github.com/big-data-europe/docker-spark  
 Submit image taken from the same source was also adapted to make the spark-submit command fit job dependencies and repositories    
   
 ## Prerequisites  
