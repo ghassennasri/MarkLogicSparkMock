@@ -55,11 +55,12 @@ public class Main {
         XMLDocumentManager docMgr = client.newXMLDocumentManager();
         //parser that produces DOM object trees from XML documents
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        //Marklogic DocumentMetadataHandle to handle collections names where books will belong to
         DocumentMetadataHandle collectionsMetadata = new DocumentMetadataHandle()
                 .withCollections("Books");
 
         SparkSession spark = SparkSession.builder().getOrCreate();
-        //custom
+        //custom dataframe schema
         StructType customSchema = new StructType(new StructField[] {
                 new StructField("_id", DataTypes.StringType, true, Metadata.empty()),
                 new StructField("author", DataTypes.StringType, true, Metadata.empty()),
@@ -69,17 +70,21 @@ public class Main {
                 new StructField("publish_date", DataTypes.StringType, true, Metadata.empty()),
                 new StructField("title", DataTypes.StringType, true, Metadata.empty())
         });
+        //Load xml file books.xml from filesystem and construct dataset
         Dataset<Row> df = spark.read()
                 .format("xml")
                 .option("rowTag", "book")
                 .schema(customSchema)
                 .load("file:///opt/spark-data/books.xml");
-        Dataset<Book> books=df.as(Encoders.bean(Book.class));
+
+        //dispaly Dataset content
         df.show();
-        //playing with dataframe -- selecting and displaying books for which the price is less than 10$
+        //playing with dataset -- selecting and displaying books for which the price is less than 10$
         df.createGlobalTempView("book");
         Dataset<Row> booksCheaperThan10 = spark.sql("SELECT _id, title, author, genre, price FROM global_temp.book WHERE price <=10");
         booksCheaperThan10.show();
+        //Cast Dataset rows to java POJO Book
+        Dataset<Book> books=df.as(Encoders.bean(Book.class));
         //looping through book dataset and writing documents to MarkLogic
         books.collectAsList().forEach(x->{
             XStream xStream=new XStream(new DomDriver());
@@ -93,13 +98,13 @@ public class Main {
                 //uri of the the book document
                 String docId = "/Books/"+x.get_id()+".xml";
                 //write to MarkLogic
-
                 docMgr.write(docId,collectionsMetadata,new DOMHandle(doc));
             }catch (Exception e){
                 LOGGER.error(e);
             }
 
         });
+        //Release Marklogic connection
         if (client!=null)
             client.release();
 
