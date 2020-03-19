@@ -55,7 +55,8 @@ public class Main {
         XMLDocumentManager docMgr = client.newXMLDocumentManager();
         //parser that produces DOM object trees from XML documents
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
+        DocumentMetadataHandle collectionsMetadata = new DocumentMetadataHandle()
+                .withCollections("Books");
 
         SparkSession spark = SparkSession.builder().getOrCreate();
         //custom
@@ -84,31 +85,23 @@ public class Main {
             XStream xStream=new XStream(new DomDriver());
             //XML String representation of a book row
             System.out.println(xStream.toXML(x));
-            DocumentBuilder builder = null;
+
             try {
-                builder = factory.newDocumentBuilder();
+                DocumentBuilder builder = factory.newDocumentBuilder();
                 //convert xml string to org.w3c.dom.Document
                 Document doc = builder.parse(new InputSource(new StringReader(xStream.toXML(x))));
                 //uri of the the book document
-                String docId = "/example/"+x.get_id()+".xml";
+                String docId = "/Books/"+x.get_id()+".xml";
                 //write to MarkLogic
-                DocumentMetadataHandle collectionsMetadata = new DocumentMetadataHandle()
-                        .withCollections("Books");
+
                 docMgr.write(docId,collectionsMetadata,new DOMHandle(doc));
-            } catch (ParserConfigurationException e) {
-                LOGGER.error(e);
-            } catch (SAXException e) {
-                LOGGER.error(e);
-            } catch (IOException e) {
-                LOGGER.error(e);
             }catch (Exception e){
                 LOGGER.error(e);
             }
-            finally {
-                if (client!=null)
-                    client.release();
-            }
+
         });
+        if (client!=null)
+            client.release();
 
 
     }
