@@ -19,6 +19,7 @@ The command will build the following services :
 | marklogic-server | Initialized MarkLogic instance with admin username and password set to admin |
 |spark-master|spark master node (Master webUI available from localhost at http://localhost:8080 having a mounted volume /opt/spark-data bound to ./data directory of the project.|
 |spark-worker-1|spark worker node linked to spark-master node and  having a mounted volume /opt/spark-data bound to ./data directory of the project.|
+
 The network marklogicsparkmock_default will be created and marklogic-server, spark-master and spark-worker-1 will join it.
  
 - You will also need to build and run the application docker image by executing the command:
