@@ -43,4 +43,4 @@ The spark job main class is [Main.java
  An example of what the log would look like is included in the project files [ApplicationContainerLog.txt
  ](https://github.com/ghassennasri/MarkLogicSparkMock/blob/master/ApplicationContainerLog.txt)
  You can also navigate to MarkLogic Qconsole, select MarkLogicSparkMaock-content as database and explore its content.
- The database will contain 12 books (to verify you can execute the xquery statement count(/Book) )
+ The database will contain 12 books (to verify you can execute the xquery statement count(fn:collection("Books")) )
