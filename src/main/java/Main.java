@@ -2,6 +2,7 @@ import com.marklogic.client.DatabaseClient;
 import com.marklogic.client.DatabaseClientFactory;
 import com.marklogic.client.document.XMLDocumentManager;
 import com.marklogic.client.io.DOMHandle;
+import com.marklogic.client.io.DocumentMetadataHandle;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
@@ -55,6 +56,7 @@ public class Main {
         //parser that produces DOM object trees from XML documents
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
+
         SparkSession spark = SparkSession.builder().getOrCreate();
         //custom
         StructType customSchema = new StructType(new StructField[] {
@@ -90,13 +92,21 @@ public class Main {
                 //uri of the the book document
                 String docId = "/example/"+x.get_id()+".xml";
                 //write to MarkLogic
-                docMgr.write(docId,new DOMHandle(doc));
+                DocumentMetadataHandle collectionsMetadata = new DocumentMetadataHandle()
+                        .withCollections("Books");
+                docMgr.write(docId,collectionsMetadata,new DOMHandle(doc));
             } catch (ParserConfigurationException e) {
                 LOGGER.error(e);
             } catch (SAXException e) {
                 LOGGER.error(e);
             } catch (IOException e) {
                 LOGGER.error(e);
+            }catch (Exception e){
+                LOGGER.error(e);
+            }
+            finally {
+                if (client!=null)
+                    client.release();
             }
         });
 
